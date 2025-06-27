@@ -1,6 +1,3 @@
-if (localStorage.getItem("isLoggedIn") !== "true") {
-  window.location.href = "index.html";
-}
 
 async function downloadVideo(urlFromHistory = null) {
   const urlInput = document.getElementById("url");
