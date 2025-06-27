@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TikTok Downloader by Zi</title>
+  <link rel="stylesheet" href="dltiktok.css" />
+</head>
+<body>
+
+  <!-- Tombol Navigasi -->
+  <div class="nav-buttons">
+    <a href="dashboard.html" class="nav-btn">🏠 Home</a>
+    <a href="allaboutrul.html" class="nav-btn">🔙 Back</a>
+  </div>
+
+  <!-- Konten Downloader -->
+  <div class="main-content">
+    <div class="container">
+      <h1>Downloader TikTok by Zi</h1>
+      <input type="text" id="url" placeholder="Tempel URL TikTok di sini" />
+      <button onclick="downloadVideo()">Download Sekarang</button>
+
+      <!-- Loading -->
+      <div class="loading" id="loading">⏳ Loading...</div>
+
+      <!-- Hasil -->
+      <div class="result" id="result">
+        <h3 id="title">Judul Video</h3>
+        <img id="cover" alt="Cover Video" />
+        <video id="video" controls></video>
+        <a id="downloadLink" download>⬇️ Download Video</a>
+
+        <!-- Audio -->
+        <audio id="audio" controls style="margin-top:10px;"></audio>
+        <a id="downloadAudio" download style="display:inline-block; margin-top:5px;">⬇️ Download Audio</a>
+
+        <!-- Info -->
+        <p><strong>Author:</strong> <span id="author"></span></p>
+        <p><strong>Views:</strong> <span id="views"></span></p>
+        <p><strong>Likes:</strong> <span id="likes"></span></p>
+        <p><strong>Comments:</strong> <span id="comments"></span></p>
+        <p><strong>Shares:</strong> <span id="shares"></span></p>
+      </div>
+
+      <!-- Riwayat Unduhan -->
+      <div class="history" id="history">
+        <h3>📜 Riwayat Unduhan</h3>
+        <label for="filterDate">Filter:</label>
+        <select id="filterDate" onchange="loadHistory()">
+          <option value="all">Semua</option>
+          <option value="today">Hari Ini</option>
+          <option value="yesterday">Kemarin</option>
+        </select>
+        <ul id="historyList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="dltiktok.js"></script>
+</body>
+</html>
