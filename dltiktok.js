@@ -1,4 +1,3 @@
-
 async function downloadVideo(urlFromHistory = null) {
   const urlInput = document.getElementById("url");
   const loading = document.getElementById("loading");
